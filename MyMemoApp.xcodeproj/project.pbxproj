@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2DF8BFFA229A6CAA0019E749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8BFF9229A6CAA0019E749 /* AppDelegate.swift */; };
-		2DF8BFFC229A6CAA0019E749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8BFFB229A6CAA0019E749 /* ViewController.swift */; };
 		2DF8BFFF229A6CAA0019E749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF8BFFD229A6CAA0019E749 /* Main.storyboard */; };
 		2DF8C001229A6CB10019E749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF8C000229A6CB10019E749 /* Assets.xcassets */; };
 		2DF8C004229A6CB10019E749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF8C002229A6CB10019E749 /* LaunchScreen.storyboard */; };
 		2DF8C00F229A6CB20019E749 /* MyMemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8C00E229A6CB20019E749 /* MyMemoAppTests.swift */; };
 		2DF8C01A229A6CB20019E749 /* MyMemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8C019229A6CB20019E749 /* MyMemoAppUITests.swift */; };
 		2DF8C028229A6EC10019E749 /* MemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8C027229A6EC00019E749 /* MemoTableViewController.swift */; };
+		2DF8C02A229BBF100019E749 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8C029229BBF100019E749 /* MemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		2DF8BFF6229A6CA90019E749 /* MyMemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF8BFF9229A6CAA0019E749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DF8BFFB229A6CAA0019E749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2DF8BFFE229A6CAA0019E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DF8C000229A6CB10019E749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DF8C003229A6CB10019E749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		2DF8C019229A6CB20019E749 /* MyMemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMemoAppUITests.swift; sourceTree = "<group>"; };
 		2DF8C01B229A6CB20019E749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DF8C027229A6EC00019E749 /* MemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewController.swift; sourceTree = "<group>"; };
+		2DF8C029229BBF100019E749 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2DF8BFF9229A6CAA0019E749 /* AppDelegate.swift */,
-				2DF8BFFB229A6CAA0019E749 /* ViewController.swift */,
+				2DF8C029229BBF100019E749 /* MemoViewController.swift */,
 				2DF8BFFD229A6CAA0019E749 /* Main.storyboard */,
 				2DF8C027229A6EC00019E749 /* MemoTableViewController.swift */,
 				2DF8C000229A6CB10019E749 /* Assets.xcassets */,
@@ -259,9 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DF8BFFC229A6CAA0019E749 /* ViewController.swift in Sources */,
 				2DF8BFFA229A6CAA0019E749 /* AppDelegate.swift in Sources */,
 				2DF8C028229A6EC10019E749 /* MemoTableViewController.swift in Sources */,
+				2DF8C02A229BBF100019E749 /* MemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
