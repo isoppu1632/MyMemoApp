@@ -71,7 +71,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="memoTextFiledChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="cDN-n8-bc0"/>
+                                    <action selector="memoTextFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="IzZ-bx-QnN"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -97,7 +97,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="memoTextField" destination="GGt-HK-PAs" id="5zO-x0-pjp"/>
+                        <outlet property="memoTextField" destination="GGt-HK-PAs" id="ADa-Pb-rXv"/>
                         <outlet property="saveButton" destination="fnc-W9-GYT" id="Ufv-WN-peb"/>
                     </connections>
                 </viewController>

@@ -10,18 +10,31 @@ import UIKit
 
 class MemoTableViewController: UITableViewController {
     
-    var memos = ["blue", "red", "pink"]
+    let userDefalts = UserDefaults.standard
+    
+    var memos = [String]()
     
     @IBAction func unwindToMemoList(sender: UIStoryboardSegue) {
         guard let sourceVC = sender.source as? MemoViewController, let memo = sourceVC.memo else {
             return
         }
-        self.memos.append(memo)
+        if let selectedIndexPath = self.tableView.indexPathForSelectedRow {
+            self.memos[selectedIndexPath.row] = memo
+        } else {
+            self.memos.append(memo)
+        }
+        self.userDefalts.set(self.memos,forKey: "memos")
         self.tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.userDefalts.object(forKey: "memos") != nil {
+            self.memos = self.userDefalts.stringArray(forKey: "memos")!
+        }else{
+            self.memos = []
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -64,16 +77,15 @@ class MemoTableViewController: UITableViewController {
      }
      */
     
-    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             self.memos.remove(at: indexPath.row)
+            self.userDefalts.set(self.memos,forKey: "memos")
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
     
     /*
      // Override to support rearranging the table view.
@@ -90,13 +102,12 @@ class MemoTableViewController: UITableViewController {
      }
      */
     
+    // MARK: - Navigation
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
         guard let identifier = segue.identifier else {
             return
         }
@@ -104,6 +115,6 @@ class MemoTableViewController: UITableViewController {
             let memoVC = segue.destination as! MemoViewController
             memoVC.memo = self.memos[(self.tableView.indexPathForSelectedRow?.row)!]
         }
-     }
+    }
     
 }
